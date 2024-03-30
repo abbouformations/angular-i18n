@@ -1,0 +1,50 @@
+<div id="formContent" class="container">
+  <!-- Tabs Titles -->
+  <!-- Icon -->
+  <div class="fadeIn first">
+    <img src="assets/images/login.jpg" id="icon" alt="User Icon" />
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
+  <!-- Login Form -->
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <input
+      formControlName="username"
+      id="username"
+      type="text"
+      class="fadeIn second"
+      placeholder="{{ 'login' | translate }}"
+    />
+    <div
+      *ngIf="f['username'].touched && f['username'].invalid"
+      class="alert alert-danger"
+    >
+      <div
+        *ngIf="f['username'].errors != null && f['username'].errors['required']"
+      >
+        Nom utilisateur obligatoire.
+      </div>
+    </div>
+
+    <input
+      formControlName="password"
+      id="password"
+      type="text"
+      class="fadeIn third"
+      placeholder="{{ 'password' | translate }}"
+    />
+    <div
+      *ngIf="f['password'].touched && f['password'].invalid"
+      class="alert alert-danger"
+    >
+      <div
+        *ngIf="f['password'].errors != null && f['password'].errors['required']"
+      >
+        Mot de passe obligatoire.
+      </div>
+    </div>
+
+    <input type="submit" class="fadeIn fourth" value="Log In" />
+  </form>
+</div>

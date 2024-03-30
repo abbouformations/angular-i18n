@@ -1,0 +1,20 @@
+<th scope="row">
+  <a
+    [routerLink]="[
+      '/',
+      { outlets: { primary: ['navbar'], contenu: ['employees', employee.id] } }
+    ]"
+    [skipLocationChange]="true"
+  >
+    {{ employee.id }}
+  </a>
+</th>
+<td>{{ employee.name }}</td>
+<td>{{ employee.salary }}</td>
+<td>{{ employee.fonction }}</td>
+<input
+  (click)="deleteEmployee(employee.id)"
+  type="submit"
+  class="fadeIn fourth"
+  value="Delete"
+/>

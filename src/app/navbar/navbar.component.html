@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a href="#" class="navbar-brand">Formation Génie Logiciel</a>
+  <ul class="navbar-nav mr-auto" routerLinkActive="active">
+    <li class="nav-item" *ngIf="isAdmin || isClient">
+      <a
+        class="nav-link"
+        [routerLink]="[
+          '/',
+          { outlets: { primary: ['navbar'], contenu: ['employees'] } }
+        ]"
+        >{{ "employees.navbar.menu" | translate }}</a
+      >
+    </li>
+    <li class="nav-item" *ngIf="isAdmin">
+      <a class="nav-link" *ngIf="isLoggedIn" routerLink="user">{{
+        "users.navbar.menu" | translate
+      }}</a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [routerLink]="[
+          '/',
+          { outlets: { primary: ['navbar'], contenu: ['product1'] } }
+        ]"
+        [skipLocationChange]="true"
+        >Produits (sans Resolver)</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [routerLink]="[
+          '/',
+          { outlets: { primary: ['navbar'], contenu: ['product2'] } }
+        ]"
+        [skipLocationChange]="true"
+        >{{ "products.with.resolver.navbar.menu" | translate }}</a
+      >
+    </li>
+  </ul>
+
+  <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="profile">{{ username }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+
+    <li class="nav-item">
+      <select
+        class="form-control"
+        #selectedLang
+        (change)="switchLang(selectedLang.value)"
+      >
+        <option
+          *ngFor="let language of translate.getLangs()"
+          [value]="language"
+          [selected]="language === translate.currentLang"
+        >
+          {{ language }}
+        </option>
+      </select>
+    </li>
+  </ul>
+</nav>
