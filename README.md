@@ -1,27 +1,7 @@
-# Tp10httpclient
+![image](https://github.com/abbouformations/angular-i18n/assets/135717843/d634dadd-80f6-45a6-9a3f-a8e2e200dabd)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+![image](https://github.com/abbouformations/angular-i18n/assets/135717843/206632ae-786c-44f0-a60d-88dfdc1b9c20)
 
-## Development server
+![image](https://github.com/abbouformations/angular-i18n/assets/135717843/8ddff1bc-21ff-463e-8a62-b63dd05bbe42)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
